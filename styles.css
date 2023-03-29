@@ -1,0 +1,104 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Indie+Flower&family=Tilt+Neon&display=swap');
+* {
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 8px;
+    }
+
+html{
+    background: linear-gradient(45deg, rgb(0, 0, 0), rgb(56, 56, 57));
+    background-size: cover;
+    min-height: 100%;
+    overflow-y: hidden;
+}
+
+    #board{
+        display: grid;
+        gap: 3px;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 10px;
+        background-color: rgba(181, 181, 255, 0) ;
+        height: 400px;
+        width: 400px;
+        margin: auto;
+    }
+    #message{
+        position: relative;
+        margin: auto;
+        margin-top: 0%;
+        margin-bottom: 0%;
+        padding: 0;
+        color:white;
+        font-size: 2em;
+        font-family: 'Indie Flower', cursive;
+       } 
+    button{
+        font-size: 75px;
+        font-weight: bold;
+        font-family: 'Indie Flower', cursive;
+
+    }
+    button:hover{
+        background-color: rgba(162, 162, 162, 0.689);
+    }
+    button:disabled,button[disabled]{
+        background-color: white;
+        font-weight: bold;
+        font-size: 75px;
+        font-family: 'Indie Flower', cursive;
+}
+#reset{
+    font-size: 2em;
+    width:12vw;
+    height:8vh;
+    margin-top: 2vh;
+}
+
+    h1{
+        font-family: 'Indie Flower', cursive;
+        margin:0;
+        padding: 0;
+        color: #66fcf1;
+                font-size: 4em;
+                margin-bottom: -1.5%;
+
+    }
+
+@media (min-width: 300px) and (max-width: 500px) and (min-height: 600px) and (max-height: 950px) {
+    #board{
+        height:250px;
+        width: 350px;
+    }
+    #reset{
+        margin-top: 150px;
+        width: 200px;
+    }
+
+}  
+
+@media (min-width: 650px) and (max-width:900px) and (min-height: 300px) and (max-height:500px) {
+    #board{
+        height:100px;
+        width: 250px;
+    }
+    h1{
+        font-size: 35px;
+    }
+    h2{
+        font-size: 25px;
+    }
+    #reset{
+        margin-top: 170px;
+        font-size: 20px;
+        width: 120px;
+    }
+    button{
+        font-size: 50px;
+
+    }
+    button:disabled,button[disabled]{
+        font-size: 50px;
+    }
+
+}
