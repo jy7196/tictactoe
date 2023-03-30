@@ -146,7 +146,7 @@ html{
     }
         #board{
             display: grid;
-            gap: 3px;
+            gap: 0px;
             grid-template-columns: repeat(3, 1fr);
             padding: 10px;
             background-color: rgba(181, 181, 255, 0) ;
@@ -207,6 +207,7 @@ html{
     #board{
         height:100px;
         width: 250px;
+        gap:0px;
     }
     h1{
         font-size: 35px;
