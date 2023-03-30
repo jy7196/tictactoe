@@ -31,7 +31,7 @@
       document.getElementById("s9").disabled = false;
 
       document.getElementById("message").innerHTML = "&nbsp;";
-
+      document.getElementById('message').style.animation = "";
 
 
     })
