@@ -30,7 +30,7 @@
       document.getElementById("s9").innerHTML="&nbsp;";
       document.getElementById("s9").disabled = false;
 
-      document.getElementById("message").innerHTML = " ";
+      document.getElementById("message").innerHTML = "&nbsp;";
 
 
 

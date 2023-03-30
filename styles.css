@@ -18,7 +18,6 @@ html{
         gap: 3px;
         grid-template-columns: repeat(3, 1fr);
         padding: 10px;
-        background-color: rgba(181, 181, 255, 0) ;
         height: 400px;
         width: 400px;
         margin: auto;
@@ -36,6 +35,8 @@ html{
     button{
         font-size: 75px;
         font-weight: bold;
+        background-color: transparent;
+        border: solid 1px white;
         font-family: 'Indie Flower', cursive;
 
     }
@@ -43,7 +44,7 @@ html{
         background-color: rgba(162, 162, 162, 0.689);
     }
     button:disabled,button[disabled]{
-        background-color: white;
+        background-color: transparent;
         font-weight: bold;
         font-size: 75px;
         font-family: 'Indie Flower', cursive;
@@ -51,8 +52,16 @@ html{
 #reset{
     font-size: 2em;
     width:12vw;
+    border-radius: 0;
+    background-color: transparent;
+    border: solid 1px #66fcf1;
+    color: #66fcf1;
     height:8vh;
     margin-top: 2vh;
+}
+#reset:hover{
+    background-color: grey;
+
 }
 
     h1{
@@ -92,6 +101,9 @@ html{
             width: 350px;
             margin: auto;
         }
+        table, tr, td{
+            background-color: transparent;
+        }
         #message{
             position: relative;
             margin: auto;
@@ -112,15 +124,16 @@ html{
             background-color: rgba(162, 162, 162, 0.689);
         }
         button:disabled,button[disabled]{
-            background-color: white;
             font-weight: bold;
             font-size: 40px;
             font-family: 'Indie Flower', cursive;
+            background-color: transparent;
+
     }
     #reset{
-        font-size: 0.5em;
-        width:16vw;
-        height:4vh;
+        font-size: 1em;
+        width:28vw;
+        height:7vh;
         margin-top: 2vh;
     }
     
@@ -154,11 +167,11 @@ html{
         width: 120px;
     }
     button{
-        font-size: 50px;
+        font-size: 45px;
 
     }
     button:disabled,button[disabled]{
-        font-size: 50px;
+        font-size: 45px;
     }
 
 }
