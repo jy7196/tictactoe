@@ -145,7 +145,11 @@ html{
         max-height: 100%;
     }
         #board{
-
+            display: grid;
+            gap: 0px;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 10px;
+            background-color: rgba(181, 181, 255, 0) ;
             height: 350px;
             width: 350px;
             margin: auto;
@@ -163,12 +167,20 @@ html{
             font-size: 2em;
             font-family: 'Indie Flower', cursive;
            } 
+        button{
+            font-size: 35px;
+            font-weight: bold;
+            font-family: 'Indie Flower', cursive;
+    
+        }
         button:hover{
             background-color: rgba(162, 162, 162, 0.689);
         }
         button:disabled,button[disabled]{
             font-weight: bold;
             font-size: 35px;
+            font-family: 'Indie Flower', cursive;
+            background-color: transparent;
 
     }
     #reset{
@@ -208,7 +220,10 @@ html{
         font-size: 20px;
         width: 120px;
     }
+    button{
+        font-size: 45px;
 
+    }
     button:disabled,button[disabled]{
         font-size: 45px;
     }
