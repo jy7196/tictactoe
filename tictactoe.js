@@ -124,10 +124,13 @@
     if (terminal(board, "X")){
       if(checkWinner(board, "X")){
         document.getElementById("message").innerHTML = "X Wins!";
+        document.getElementById('message').style.animation="grow 2s linear";
+
       }
       else if(checkDraw(board)){
         document.getElementById("message").innerHTML = "Draw!";
-        }
+        document.getElementById('message').style.animation="grow 2s linear";
+      }
       }
     else{
       var cp = compMove(board);
@@ -140,9 +143,14 @@
       if (terminal(board, "O")){
         if(checkWinner(board, "O")){
           document.getElementById("message").innerHTML = "O Wins!";
+          document.getElementById('message').style.animation="grow 2s linear";
+
         }
         else if(checkDraw(board)){
           document.getElementById("message").innerHTML = "Draw!";
+          document.getElementById('message').style.animation="grow 2s linear";
+          
+
         }
       }
     }, 1000);

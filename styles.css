@@ -1,5 +1,26 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Indie+Flower&family=Tilt+Neon&display=swap');
+@keyframes growletter {
+    0%   {background-color: white;
+        transform:rotate(-360deg);
+        font-size: 2em;
+        }
+    50%  {background-color: #66fcf285;
+        font-size: 0px;
+        }
+    100%{background-color: transparent;
+            font-size: 2em;
+    }
+}
+@keyframes grow {
+    
+        0% { left: -150%; }
+        35% { left: 70%; }
+        65% { left: 350%; }
+        100% { left: 0%; }
+
+}
+
 * {
     box-sizing: border-box;
     text-align: center;
@@ -15,12 +36,40 @@ html{
 
     #board{
         display: grid;
-        gap: 3px;
+        gap: 0px;
         grid-template-columns: repeat(3, 1fr);
         padding: 10px;
         height: 400px;
         width: 400px;
         margin: auto;
+    }
+    #s1{
+        border-left: transparent;
+        border-top: transparent;
+    }
+    #s2{
+        border-top: transparent;
+    }
+    #s3{
+        border-right: transparent;
+        border-top: transparent;
+    }
+    #s4{
+        border-left: transparent;
+    }
+    #s6{
+        border-right: transparent;
+    }
+    #s7{
+        border-left: transparent;
+        border-bottom: transparent;
+    }
+    #s8{
+        border-bottom: transparent;
+    }
+    #s9{
+        border-bottom: transparent;
+        border-right: transparent;
     }
     #message{
         position: relative;
@@ -37,6 +86,7 @@ html{
         font-weight: bold;
         background-color: transparent;
         border: solid 1px white;
+        border-radius: 0;
         font-family: 'Indie Flower', cursive;
 
     }
@@ -46,8 +96,11 @@ html{
     button:disabled,button[disabled]{
         background-color: transparent;
         font-weight: bold;
+        border-radius: 0;
         font-size: 75px;
         font-family: 'Indie Flower', cursive;
+        animation-name: growletter;
+        animation-duration: 1s;
 }
 #reset{
     font-size: 2em;
