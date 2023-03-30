@@ -56,6 +56,7 @@
   
     if (board[0] === player && board[3] === player && board[6] === player) {
       return true;
+
     }
   
     if (board[0] === player && board[4] === player && board[8] === player) {
@@ -79,6 +80,68 @@
     }
   
     if (board[6] === player && board[7] === player && board[8] === player) {
+      return true;
+    }
+  
+    return false;
+  }
+
+  function highlightWin(board, player) {
+    if (board[0] === player && board[1] === player && board[2] === player) {
+      console.log(player);
+      document.getElementById('s1').style.animation="growletter 2s linear";
+      document.getElementById('s2').style.animation="growletter 2s linear";
+      document.getElementById('s3').style.animation="growletter 2s linear";
+      return true;
+    }
+  
+    if (board[0] === player && board[3] === player && board[6] === player) {
+      document.getElementById('s1').style.animation="growletter 2s linear";
+      document.getElementById('s4').style.animation="growletter 2s linear";
+      document.getElementById('s7').style.animation="growletter 2s linear";
+      return true;
+
+    }
+  
+    if (board[0] === player && board[4] === player && board[8] === player) {
+      document.getElementById('s1').style.animation="growletter 2s linear";
+      document.getElementById('s5').style.animation="growletter 2s linear";
+      document.getElementById('s9').style.animation="growletter 2s linear";
+      return true;
+    }
+  
+    if (board[1] === player && board[4] === player && board[7] === player) {
+      document.getElementById('s2').style.animation="growletter 2s linear";
+      document.getElementById('s5').style.animation="growletter 2s linear";
+      document.getElementById('s8').style.animation="growletter 2s linear";
+      return true;
+    }
+  
+    if (board[2] === player && board[4] === player && board[6] === player) {
+      document.getElementById('s3').style.animation="growletter 2s linear";
+      document.getElementById('s5').style.animation="growletter 2s linear";
+      document.getElementById('s7').style.animation="growletter 2s linear";
+      return true;
+    }
+  
+    if (board[2] === player && board[5] === player && board[8] === player) {
+      document.getElementById('s3').style.animation="growletter 2s linear";
+      document.getElementById('s6').style.animation="growletter 2s linear";
+      document.getElementById('s9').style.animation="growletter 2s linear";
+      return true;
+    }
+  
+    if (board[3] === player && board[4] === player && board[5] === player) {
+      document.getElementById('s4').style.animation="growletter 2s linear";
+      document.getElementById('s5').style.animation="growletter 2s linear";
+      document.getElementById('s6').style.animation="growletter 2s linear";
+      return true;
+    }
+  
+    if (board[6] === player && board[7] === player && board[8] === player) {
+      document.getElementById('s7').style.animation="growletter 2s linear";
+      document.getElementById('s8').style.animation="growletter 2s linear";
+      document.getElementById('s9').style.animation="growletter 2s linear";
       return true;
     }
   
@@ -124,6 +187,7 @@
     if (terminal(board, "X")){
       if(checkWinner(board, "X")){
         document.getElementById("message").innerHTML = "X Wins!";
+        highlightWin(board,'X');
         document.getElementById('message').style.animation="grow 2s linear";
 
       }
@@ -143,6 +207,7 @@
       if (terminal(board, "O")){
         if(checkWinner(board, "O")){
           document.getElementById("message").innerHTML = "O Wins!";
+          highlightWin(board,'O');
           document.getElementById('message').style.animation="grow 2s linear";
 
         }
