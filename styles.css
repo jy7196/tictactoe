@@ -145,11 +145,7 @@ html{
         max-height: 100%;
     }
         #board{
-            display: grid;
-            gap: 0px;
-            grid-template-columns: repeat(3, 1fr);
-            padding: 10px;
-            background-color: rgba(181, 181, 255, 0) ;
+
             height: 350px;
             width: 350px;
             margin: auto;
