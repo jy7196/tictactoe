@@ -6,29 +6,47 @@
       board = [" ", " ", " ", " ", " ", " ", " ", " ", " "];
       document.getElementById("s1").innerHTML="&nbsp;";
       document.getElementById("s1").disabled = false;
+      document.getElementById('s1').style.animation = "";
+
       document.getElementById("s2").innerHTML="&nbsp;";
       document.getElementById("s2").disabled = false;
+      document.getElementById('s2').style.animation = "";
+
 
       document.getElementById("s3").innerHTML="&nbsp;";
       document.getElementById("s3").disabled = false;
+      document.getElementById('s3').style.animation = "";
+
 
       document.getElementById("s4").innerHTML="&nbsp;";
       document.getElementById("s4").disabled = false;
+      document.getElementById('s4').style.animation = "";
+
 
       document.getElementById("s5").innerHTML="&nbsp;";
       document.getElementById("s5").disabled = false;
+      document.getElementById('s5').style.animation = "";
+
 
       document.getElementById("s6").innerHTML="&nbsp;";
       document.getElementById("s6").disabled = false;
+      document.getElementById('s6').style.animation = "";
+
 
       document.getElementById("s7").innerHTML="&nbsp;";
       document.getElementById("s7").disabled = false;
+      document.getElementById('s7').style.animation = "";
+
 
       document.getElementById("s8").innerHTML="&nbsp;";
       document.getElementById("s8").disabled = false;
+      document.getElementById('s8').style.animation = "";
+
 
       document.getElementById("s9").innerHTML="&nbsp;";
       document.getElementById("s9").disabled = false;
+      document.getElementById('s9').style.animation = "";
+
 
       document.getElementById("message").innerHTML = "&nbsp;";
       document.getElementById('message').style.animation = "";
