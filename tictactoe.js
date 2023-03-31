@@ -222,6 +222,10 @@
       document.getElementById("s" + (cp+1).toString()).innerHTML = "O";
       document.getElementById("s" + (cp+1).toString()).disabled = true;
       console.log(board);
+      temp = getPossibleMoves(board);
+      for (var i = 0; i < temp.length; i++){
+        document.getElementById("s" + (temp[i]+1).toString()).disabled = false;
+      }
       if (terminal(board, "O")){
         if(checkWinner(board, "O")){
           document.getElementById("message").innerHTML = "O Wins!";
@@ -243,10 +247,18 @@
 }
   
   function compMove(board) {
+    var temp = getPossibleMoves(board);
+    for (var i = 0; i < temp.length; i++){
+      document.getElementById("s" + (temp[i]+1).toString()).disabled = true;
+    }
     var bestMove, bestScore, moves, score;
     bestMove = -1;
     bestScore = -1000;
     moves = getPossibleMoves(board);
+    var temp = getPossibleMoves(board);
+    for (var i = 0; i < temp.length; i++){
+      document.getElementById("s" + (i+1).toString()).disabled = true;
+    }
     for (var i = 0; i < board.length; i += 1) {
       board[moves[i]] = "O";
       score = minimax(board, 1, false);
@@ -257,6 +269,7 @@
         bestMove = moves[i];
       }
     }
+
     return bestMove;
   }
   

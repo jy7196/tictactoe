@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Indie+Flower&family=Tilt+Neon&display=swap');
 @keyframes growletter {
     0%   {background-color: white;
-        transform: rotate(360deg);
         }
     50%  {background-color: #66fcf285;
         }
