@@ -206,12 +206,14 @@
       if(checkWinner(board, "X")){
         document.getElementById("message").innerHTML = "X Wins!";
         highlightWin(board,'X');
-        document.getElementById('message').style.animation="grow 2s linear";
+        disableLeftOver(board);
+        document.getElementById('message').style.animation="grow 1.5s linear";
 
       }
       else if(checkDraw(board)){
         document.getElementById("message").innerHTML = "Draw!";
-        document.getElementById('message').style.animation="grow 2s linear";
+        disableLeftOver(board);
+        document.getElementById('message').style.animation="grow 1.5s linear";
       }
       }
     else{
@@ -222,20 +224,18 @@
       document.getElementById("s" + (cp+1).toString()).innerHTML = "O";
       document.getElementById("s" + (cp+1).toString()).disabled = true;
       console.log(board);
-      temp = getPossibleMoves(board);
-      for (var i = 0; i < temp.length; i++){
-        document.getElementById("s" + (temp[i]+1).toString()).disabled = false;
-      }
+      enableLeftOver(board);
       if (terminal(board, "O")){
         if(checkWinner(board, "O")){
           document.getElementById("message").innerHTML = "O Wins!";
           highlightWin(board,'O');
-          document.getElementById('message').style.animation="grow 2s linear";
-
+          disableLeftOver(board);
+          document.getElementById('message').style.animation="grow 1.5s linear";
         }
         else if(checkDraw(board)){
           document.getElementById("message").innerHTML = "Draw!";
-          document.getElementById('message').style.animation="grow 2s linear";
+          disableLeftOver(board);
+          document.getElementById('message').style.animation="grow 1.5s linear";
           
 
         }
@@ -245,20 +245,27 @@
     }
 
 }
-  
+
+function disableLeftOver(board){
+  var temp = getPossibleMoves(board);
+  for (var i = 0; i < temp.length; i++){
+    document.getElementById("s" + (temp[i]+1).toString()).disabled = true;
+  }
+
+}
+function enableLeftOver(board){
+  var temp = getPossibleMoves(board);
+  for (var i = 0; i < temp.length; i++){
+    document.getElementById("s" + (temp[i]+1).toString()).disabled = false;
+  }
+
+}
   function compMove(board) {
-    var temp = getPossibleMoves(board);
-    for (var i = 0; i < temp.length; i++){
-      document.getElementById("s" + (temp[i]+1).toString()).disabled = true;
-    }
     var bestMove, bestScore, moves, score;
     bestMove = -1;
     bestScore = -1000;
     moves = getPossibleMoves(board);
-    var temp = getPossibleMoves(board);
-    for (var i = 0; i < temp.length; i++){
-      document.getElementById("s" + (i+1).toString()).disabled = true;
-    }
+    disableLeftOver(board);
     for (var i = 0; i < board.length; i += 1) {
       board[moves[i]] = "O";
       score = minimax(board, 1, false);
